@@ -19,24 +19,22 @@ define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
 switch(THIS_PAGE){
 
     case 'index.php':
-        $title = "Yuqiang's WEB120 Portal Page";
+        $title = "Yuqiang's WEB120 Big Website";
         $logo = "fa-home";
     break;
-    /*
-    case 'aia.php':
-        $title = "Yuqiang's AIA page";
-        $logo = "fa-universal-access";
-        $logo_color = ' style="color:#0f0"';
-        $PageID = 'Audience Issues and Approach'
+        
+    case 'big1.php':
+        $title = "Yuqiang's WEB120 Big Research Website";
     break;
 
-    case 'flowchart.php':
-        $title = "Yuqiang's Flowchart Page";
-        $logo = "fa-paper-plane-o";
-        $logo_color = ' style="color:#0f0"';
-        $PageID = 'Flowchart'
+    case 'calendar.php':
+        $title = "Yuqiang's WEB120 Big Website Calendar";
     break;
-    */
+        
+    case 'web.php':
+        $title = "Yuqiang's WEB120 Big Website Web Accessibility";
+    break;
+        
     case 'contactme.php':
         $title = "Yuqiang's WEB120 Contact Page";
         $logo = "fa-paper-plane-o";
@@ -51,11 +49,11 @@ switch(THIS_PAGE){
 }
 
 //place URL & labels in the array here for navigation:
+
 $nav1['index.php'] = "Welcome";
-$nav1['big/index.php'] = "Big";
-$nav1['aia.php'] = "AIA";
-$nav1['https://docs.google.com/document/d/1KOxZpBjf0DOHr9EuwST7rqlVzRRCAxEOZA5wlQa_830/edit?usp=sharing'] = "Flowchart";
-$nav1['fp/index.php'] = "Final Project";
+$nav1['big1.php'] = "Big";
+$nav1['web.php'] = "Web Accessibility";
+$nav1['calendar.php'] = "Calendar";
 $nav1['contactme.php'] = "Contact Yuqiang";
 
 /*
@@ -63,13 +61,31 @@ makeLinks function will create our dynamic nav when called.
 Call like this:
 echo makeLinks($nav1); #in which $nav1 is an associative array of links
 */
+
 function makeLinks($linkArray)
 {
     $myReturn = '';
 
     foreach($linkArray as $url => $text)
     {
-        if($url == THIS_PAGE)
+        if($text == Big)
+        {
+            $myReturn .= '
+                <div id="cssmenu">
+                    <ul>
+                        <li class="active"><a href="#">' . $text . '</a>
+                            <ul>
+                                <li><a href="big1.php"><i class="fa fa-fw fa-globe"></i> Responsive vs Mobile</a></li>
+                                <li><a href="big2.php"><i class="fa fa-fw fa-globe"></i> Galleries</a></li>
+                                <li><a href="big3.php"><i class="fa fa-fw fa-globe"></i> Flexbox</a></li>
+                                <li><a href="big4.php"><i class="fa fa-fw fa-globe"></i> Monetizing websites</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            ' . PHP_EOL;
+        }
+        else if($url == THIS_PAGE)
         {//selected page - add class reference
 	    	$myReturn .= '<li><a class="selected" href="' . $url . '">' . $text . '</a></li>' . PHP_EOL;
     	}else{
