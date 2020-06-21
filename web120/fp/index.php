@@ -1,18 +1,4 @@
 <?php include "includes/header.php";?>
-<p>FP page is coming soon!</p>
-<p>FP page is coming soon!</p>
-<p>FP page is coming soon!</p>
-<p>FP page is coming soon!</p>
-<p>FP page is coming soon!</p>
-</section>
-<!-- END LEFT COL -->
-
-<!-- START RIGHT COL -->
-<aside>
- <h3>Right Column</h3>
- <p>Lorem Ipsum place holder text goes here for now</p>
- <p>Lorem Ipsum place holder text goes here for now</p>
-</aside>
-<!-- END RIGHT COL -->
+   <h2>爽吗彬仔 唔A你睇 爽吗</h2>
  
 <?php include "includes/footer.php";?>
