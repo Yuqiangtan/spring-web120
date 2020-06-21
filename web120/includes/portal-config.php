@@ -55,7 +55,7 @@ $nav1['index.php'] = "Welcome";
 $nav1['big/index.php'] = "Big";
 $nav1['aia.php'] = "AIA";
 $nav1['https://docs.google.com/document/d/1KOxZpBjf0DOHr9EuwST7rqlVzRRCAxEOZA5wlQa_830/edit?usp=sharing'] = "Flowchart";
-$nav1['fp/index.php'] = "Final Project";
+$nav1['fp/template.php'] = "Final Project";
 $nav1['contactme.php'] = "Contact Yuqiang";
 
 /*
